@@ -3,3 +3,7 @@ RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
 
 RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^blog.oicto.com [NC] 
+RewriteRule ^(.*)$ http://www.oicto.com/$1 [L,R=301]
