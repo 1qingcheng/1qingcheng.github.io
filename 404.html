@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>404</title>
+
+<link href="./404_files/404.css" rel="stylesheet" type="text/css">
+
+<style>#scrollUpIco {
+position: fixed;
+z-index: 1024000;
+width: 50px;
+height: 50px;
+border-radius: 25px;
+bottom: 20px;
+right: 25px;
+line-height: 50px;
+text-align: center;
+font-weight: bold;
+background-color: rgba(0, 0, 0, 0.2);
+text-shadow: 0px 0px 5px #000000;
+color: #fff;
+text-decoration: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+cursor: default;
+}
+#scrollUpIco:hover {
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff !important;
+cursor: pointer;
+}
+#scrollUpIco:-webkit-full-screen {display: none}</style></head>
+<body style="background-color:#f1f4f8;">
+
+<div class="st"><img src="./404_files/404_03.png"></div> 
+<div class="fh"><a href="index.html"><img src="./404_files/404_06.png"></a></div>
+<div class="fh"><b id="num">2</b>秒后跳转到首页</div>
+
+<!--脚本开始--> 
+<script> 
+function countDown(secs){ 
+	if(--secs>0) {
+		document.getElementById("num").innerText=secs;
+		setTimeout(function(){countDown(secs)},1000);  
+	}
+	else{
+		window.location.href='index.html';
+	} 
+}
+countDown(5); 
+</script> 
+<!--脚本结束--> 
